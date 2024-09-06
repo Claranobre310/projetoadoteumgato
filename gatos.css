@@ -1,4 +1,4 @@
-@charset "UTF-8";
+    @charset "UTF-8";
 
 body {
     text-align: center;
@@ -17,12 +17,6 @@ div{
     display: inline-block;
 }
 
-div:hover{
-    border-color: aqua;            /* toda vez que passar o mouse por cima fica essa cor ai */
-    background-color: #0c8dc0;
-    border-radius: 90px;
-
-}
 
 div > p {
     display:none;

@@ -16,8 +16,8 @@ a{
     text-decoration: none;
 }
 
-a.hover{
-    color: chocolate;
+a:hover{
+    background-color: chocolate;
 }
 
 ul{
@@ -26,11 +26,11 @@ ul{
     list-style-type: none;
 }
 
-li.icone{
+.icone{
     text-align: center;
 }
 
-div.imagem {
+.imagem {
     left:20%;
 }
 

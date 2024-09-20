@@ -2,9 +2,15 @@
 
 body {
     font-size: 20px;
-    background-color: floralwhite;
-    background-attachment: fixed;
+    background-image:linear-gradient(to right, floralwhite, #809bce);
     font-family: Arial, Helvetica, sans-serif;
+}
+
+
+img{
+    border-radius: 80px;
+    border: 10px solid #eac4d5;
+    margin-left: 10px;
 }
 
 ul{
@@ -12,14 +18,11 @@ ul{
     justify-content: space-evenly;
     list-style-type: none;
 }
-img{
-    border-radius: 80px;
-    border: 10px solid greenyellow;
-}
-div{
-    display: inline-table;
+
+#info{
+    margin-left: 20px;
 }
 
-p#pagfinal{
+#pagfinal{
     text-align: center;
 }

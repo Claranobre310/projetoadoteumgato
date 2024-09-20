@@ -4,10 +4,11 @@ body {
     font-size: 20px;
     background-image:linear-gradient(to right, floralwhite, #809bce);
     font-family: Arial, Helvetica, sans-serif;
+    margin: 0%;
 }
 
 
-img{
+.gato{
     border-radius: 80px;
     border: 10px solid #eac4d5;
     margin-left: 10px;
@@ -25,4 +26,27 @@ ul{
 
 #pagfinal{
     text-align: center;
+}
+
+header{
+    display: flex;
+    height: 90px;
+}
+
+
+.adotee{
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    top: 6%;
+}
+
+a{
+    text-decoration: none;
+}
+
+#botao{
+    margin-left: 1050px;
+    justify-content: end;
+    top: 4%;
 }

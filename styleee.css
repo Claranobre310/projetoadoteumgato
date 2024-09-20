@@ -1,4 +1,4 @@
-charset "UTF-8";
+@charset "UTF-8";
 
 body {
     font-size: 20px;
@@ -25,7 +25,7 @@ span{
 }
 
 header > div{
-    height:100px;
+    height:90px;
 }
 
 a{

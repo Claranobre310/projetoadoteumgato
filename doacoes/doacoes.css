@@ -2,6 +2,7 @@ body {
     font-size: 20px;
     background-color: floralwhite;
     font-family: Arial, Helvetica, sans-serif;
+    margin: 0%;
 }
 
 ul{
@@ -17,10 +18,6 @@ a{
     text-decoration: none;
 }
 
-a:hover{
-    background-color: chocolate;
-}
-
 .tdo{
     position:absolute;
     top: 50%;
@@ -28,3 +25,29 @@ a:hover{
     transform:
     translate(-50%, -50%);
 }
+
+header{
+    display: flex;
+    height: 90px;
+}
+
+#botao{
+    margin-left: 1050px;
+    justify-content: end;
+    top: 4%;
+}
+
+span{
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    top: 6%;
+}
+
+.mid{
+    font-family: 'Times New Roman', Times, serif;
+    color: #809bce;
+    text-align: center;
+    margin: auto;
+}
+

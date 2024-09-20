@@ -7,6 +7,7 @@
     <title>AdoteUmGatoMoc</title>
 <style>
     body{
+    margin: 0%;
     font-size: 20px;
     background-color: floralwhite;
     background-attachment: fixed;
@@ -14,17 +15,42 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-div{
+div#meio{
     position:absolute;
     top: 50%;
     left: 50%;
     transform:
     translate(-50%, -50%);
 }
+header{
+    display: flex;
+    height: 90px;
+}
+
+#botao{
+    margin-left: 1050px;
+    justify-content: end;
+    top: 4%;
+}
+
+span{
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    top: 6%;
+}
 </style>
 </head>
 <body>
-    <div>
+    <header>
+        <div>
+            <img src="Iconcreme-Halloween-Cat.ico" alt="ícone da página" width="85px">
+            <span><strong>AdoteUmGatoMoc</strong></span>
+            <div class="div4"><abbr title="voltar à pagina inicial"><span id="botao"><a href="indexxx.html"><img src="gatosexample/109618.png" alt="Voltar para a página inicial" width="50px"></a></span></abbr></div>
+        </div>
+    </header>
+    <hr>
+    <div id="meio">
         <strong>
             <p> endereço: Rua Brasileira, N° 344, avenida feliz, Montes Claros </p>
             <p> contato: 38 98756-4991 </p>

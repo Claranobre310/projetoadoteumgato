@@ -1,4 +1,4 @@
-    @charset "UTF-8";
+@charset "UTF-8";
 
 body {
     text-align: center;
@@ -6,13 +6,11 @@ body {
     background-color: floralwhite;
     background-attachment: fixed;
     font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
 }
 
-header{
-    text-shadow: 1px 1px 0px black;
-}
 
-div{
+.divv{
     justify-content: space-between;
     display: inline-block;
 }
@@ -26,12 +24,40 @@ div:hover > p {
     display:block;
 }
 
-img{
+.imgg{
     border-radius: 90px;
-    border: 6px solid blue;
+    border: 6px solid #d6e6ff;
 }
 
 h1{
     font-family: 'Times New Roman', Times, serif;
-    color: #3CA6A6;
+    color: #809bce;
+    text-align: center;
+    margin: auto;
 }
+
+header{
+    display: flex;
+    height: 90px;
+}
+
+#botao{
+    margin-left: 1050px;
+    justify-content: end;
+    top: 4%;
+}
+
+span{
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    top: 6%;
+}
+
+.mid{
+    font-family: 'Times New Roman', Times, serif;
+    color: #809bce;
+    text-align: center;
+    margin: auto;
+}
+

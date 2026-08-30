@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="Iconcreme-Halloween-Cat.ico" type="image/x-icon" />
+    <title>AdoteUmGatoMoc</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #faf3ed;
+            color: #3e2c1b;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* ===== HEADER ===== */
+        header {
+            padding: 15px 30px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;    
+            margin-bottom: 5px;
+
+        }
+
+        .logo {
+            display: flex;
+           align-items: center;
+            gap: 12px;
+        }
+
+        .logo img {
+            width: 60px;
+            height: 60px;
+            padding: 5px;
+        }
+
+        .logo span {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #2d1a0a;
+            letter-spacing: 1px;
+        }
+
+        nav {
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        nav a {
+            font-weight: 600;
+            color: #2d1a0a;
+            padding: 8px 14px;
+            border-radius: 30px;
+            transition: 0.3s;
+            font-size: 1.05rem;
+        }
+
+        nav a:hover {
+            background: rgba(255,255,255,0.4);
+            transform: scale(1.05);
+        }
+
+        nav a.destaque {
+            background: #2d1a0a;
+            color: #ffb07c;
+            padding: 8px 22px;
+        }
+
+        nav a.destaque:hover {
+            background: #4d2e18;
+            color: #fff;
+        }
+        hr {
+            border: none;
+            height: 2px;
+            background: linear-gradient(to right, transparent, #d68c5c, transparent);
+            margin: 10px 0 20px 0;
+        }
+
+.banner {
+    position: relative;
+    height: 600px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    overflow: hidden; /* para a imagem não vazar */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.banner-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* cobre todo o espaço */
+    z-index: 0;
+}
+
+.banner-content {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.banner::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+        main {
+            box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.7);
+            background-size: cover;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            background-repeat: no-repeat;
+             background-position: center;
+}
+
+        .menu-gatos {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+            list-style: none;
+            padding: 0;
+            margin-bottom: 30px;
+        }
+
+        .menu-gatos li {
+            background: #fff5ec;
+            padding: 18px 28px;
+            border-radius: 16px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.04);
+            transition: 0.3s;
+            flex: 1 1 200px;
+            text-align: center;
+            border: 1px solid #f0d6c0;
+        }
+
+        .menu-gatos li:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 8px 25px rgba(255, 154, 86, 0.3);
+            border-color: #ff9a56;
+        }
+
+        .menu-gatos li a {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #4d2e18;
+        }
+
+        .menu-gatos li p {
+            font-size: 2rem;
+            margin-top: 6px;
+        }
+
+        h3 {
+            font-size: 1.6rem;
+            color: #4d2e18;
+            margin: 25px 0 15px 0;
+            border-left: 6px solid #ff9a56;
+            padding-left: 15px;
+        }
+
+        .lista-cuidados {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px 30px;
+        }
+
+        .lista-cuidados li {
+            background: #faf3ed;
+            padding: 12px 18px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.05rem;
+        }
+
+        .lista-cuidados li::before {
+            content: "🐾";
+            font-size: 1.4rem;
+        }
+
+        .destaque-texto {
+            background: #ffeedd;
+            padding: 18px;
+            border-radius: 16px;
+            text-align: center;
+            font-size: 1.2rem;
+            margin-top: 20px;
+            border: 2px dashed #ff9a56;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: #2d1a0a;
+            color: #f5e3d4;
+            padding: 35px 30px;
+            border-radius: 20px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+        }
+
+        footer h3 {
+            color: #ffb07c;
+            border-left-color: #ffb07c;
+        }
+
+        footer p {
+            color: #e6d3c0;
+            max-width: 600px;
+        }
+
+        footer form {
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px 25px;
+            align-items: flex-end;
+        }
+
+        footer form div {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            flex: 1 1 180px;
+        }
+
+        footer label {
+            font-weight: 600;
+            color: #ffd8b5;
+            font-size: 0.95rem;
+        }
+
+        footer input {
+            padding: 10px 14px;
+            border: none;
+            border-radius: 30px;
+            background: #f5e3d4;
+            font-size: 1rem;
+            outline: 2px solid transparent;
+            transition: 0.3s;
+        }
+
+        footer input:focus {
+            outline-color: #ff9a56;
+            background: #fff;
+        }
+
+        .botao {
+            flex: 0 1 auto !important;
+        }
+
+        .botao button {
+            background: #ff9a56;
+            border: none;
+            padding: 10px 35px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: #2d1a0a;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 4px 10px rgba(255, 154, 86, 0.3);
+        }
+
+        .botao button:hover {
+            background: #ffb07c;
+            transform: scale(1.05);
+            box-shadow: 0 6px 18px rgba(255, 154, 86, 0.5);
+        }
+
+        /* ===== RESPONSIVO ===== */
+        @media (max-width: 700px) {
+            header {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 15px;
+            }
+            .logo {
+                justify-content: center;
+            }
+            nav {
+                justify-content: center;
+            }
+            .lista-cuidados {
+                grid-template-columns: 1fr;
+            }
+            .menu-gatos li {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="Iconcreme-Halloween-Cat.ico" alt="Ícone da página" />
+        <span>AdoteUmGatoMoc</span>
+    </div>
+    <nav>
+        <a href="#"><strong>Início</strong></a>
+        <a href="gatosdisponiveis.html">Gatos</a>
+        <a href="gatosespeciais.html">Especiais</a>
+        <a href="doacoes/paginicidoacao.html">Doações</a>
+        <a href="cadastro.html" class="destaque"> Minha conta </a>
+    </nav>
+</header>
+
+<section class="banner">
+        <img src="projgatos/pexels-наталия-штепура-13254294.jpg" alt="Banner" class="banner-img">
+    </section>
+
+<main>
+    <ul class="menu-gatos">
+        <li>
+            <a href="gatosdisponiveis.html">Gatos disponíveis</a>
+            <p>🐱 ❤️</p>
+        </li>
+        <li>
+            <a href="gatosespeciais.html"><abbr title="Gatos com deficiência">Gatos com deficiências</abbr></a>
+            <p>🐱‍🩹</p>
+        </li>
+        <li>
+            <a href="doacoes/paginicidoacao.html">Doações</a>
+            <p>✨</p>
+        </li>
+    </ul>
+
+    <hr />
+
+    <h3>🐾 Coisas que você deve saber antes de adotar um pet:</h3>
+    <ol class="lista-cuidados">
+        <li>Despesas: alimentação, veterinário e emergências</li>
+        <li>Tempo e dedicação: atenção diária é essencial</li>
+        <li>Saúde e bem‑estar: vacinas e vermífugos em dia</li>
+        <li>Alergias: verifique se ninguém na casa tem alergia</li>
+        <li>Paciência e amor: fundamentais para a adaptação</li>
+        <li>Decisão consciente: tenha certeza da responsabilidade</li>
+    </ol>
+
+    <div class="destaque-texto">
+        🐈 Adotar um gatinho traz muita alegria, mas exige planejamento e dedicação.
+    </div>
+</main>
+
+<footer>
+    <h3>Sobre nós</h3>
+    <p>
+        Somos uma instituição sediada em Montes Claros que tem como objetivo
+        ajudar pessoas a doar pets e ajudar pessoas a adotar pets. Também ajudamos
+        gatinhos de rua e gatinhos doentes.
+    </p>
+
+    <h3>📩 Receba atualizações sobre gatinhos disponíveis:</h3>
+    <form action="/formulario-contato" method="post">
+        <div>
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome_usuario" placeholder="Seu nome" required />
+        </div>
+        <div>
+            <label for="email">E‑mail</label>
+            <input type="email" id="email" name="email_usuario" placeholder="seu@email.com" required />
+        </div>
+        <div>
+            <label for="contato">Contato</label>
+            <input type="tel" id="contato" name="contato_usuario" placeholder="(99) 99999-9999" />
+        </div>
+        <div class="botao">
+            <button type="submit">Enviar</button>
+        </div>
+    </form>
+</footer>
+
+<script>
+    console.log('🐱 Bem-vindo ao AdoteUmGatoMoc!');
+</script>
+
+</body>
+</html>

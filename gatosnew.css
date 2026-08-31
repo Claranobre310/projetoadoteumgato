@@ -1,0 +1,267 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cor-texto: #2d1a0a;
+    --borda-arredondada: 20px;
+    --transicao: 0.3s ease;
+}
+
+body {
+    background: #faf3ed;
+    color: var(--cor-texto);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    border-radius: var(--borda-arredondada);
+    padding: 15px 30px;
+    margin-bottom: 5px;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-icon {
+    width: 60px;
+    height: 60px;
+    padding: 5px;
+}
+
+.logo-texto {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--cor-primaria);
+    letter-spacing: 1px;
+}
+
+.btn-voltar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: white;
+    padding: 8px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    color: var(--cor-texto);
+    font-weight: 600;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    transition: var(--transicao);
+}
+
+.btn-voltar:hover {
+    background: var(--cor-primaria);
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(128, 155, 206, 0.4);
+}
+
+.btn-voltar img {
+    width: 28px;
+    height: 28px;
+    filter: invert(20%);
+}
+
+.btn-voltar:hover img {
+    filter: invert(100%);
+}
+
+
+hr.divisoria {
+    height: 2px;
+    
+    background: linear-gradient(to right, transparent, var(--cor-primaria), transparent);
+    margin: 20px 0 30px 0;
+}
+
+.titulo-principal {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--cor-primaria);
+    text-align: center;
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+}
+
+.subtitulo {
+    text-align: center;
+    color: #555;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 30px 20px;
+    justify-items: center;
+    margin: 20px 0;
+}
+
+.gato-card {
+    width: 100%;
+    max-width: 220px;
+    text-align: center;
+    transition: var(--transicao);
+    border-radius: 20px;
+    background: white;
+    padding: 15px 15px 10px;
+    box-shadow: var(--sombra-padrao);
+    border: 1px solid #f0f0f0;
+}
+
+.gato-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 35px rgba(128, 155, 206, 0.25);
+    border-color: var(--cor-primaria);
+}
+
+.gato-card a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.gato-card picture {
+    display: block;
+    border-radius: 50%;
+    overflow: hidden;
+    aspect-ratio: 1 / 1;
+    background: var(--cor-secundaria);
+}
+
+.gato-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transicao);
+    display: block;
+}
+
+.gato-card:hover img {
+    transform: scale(1.05);
+}
+
+
+.nome-gato {
+    margin-top: 12px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--cor-primaria);
+    opacity: 0;
+    transform: translateY(-5px);
+    transition: var(--transicao);
+    letter-spacing: 0.5px;
+}
+
+.gato-card:hover .nome-gato {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+footer {
+    margin-top: auto;
+    padding: 25px 20px;
+    text-align: center;
+    background: #e6f0ff;
+    border-radius: var(--borda-arredondada);
+    color: var(--cor-texto);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+footer p {
+    margin: 4px 0;
+    font-size: 1rem;
+}
+
+footer p:first-child {
+    font-weight: 600;
+    color: var(--cor-primaria);
+}
+
+
+@media (max-width: 768px) {                         
+    body {
+        padding: 12px;
+    }
+
+    .header-container {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+    .logo-area {
+        justify-content: center;
+    }
+
+    .logo-texto {
+        font-size: 1.4rem;
+    }
+
+    .btn-voltar {
+        justify-content: center;
+        padding: 8px 15px;
+    }
+
+    .titulo-principal {
+        font-size: 2rem;
+    }
+
+    .galeria {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 20px;
+    }
+
+    .gato-card {
+        max-width: 180px;
+        padding: 10px;
+    }
+
+    .nome-gato {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .galeria {
+        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+        gap: 15px;
+    }
+
+    .gato-card {
+        max-width: 150px;
+        padding: 8px;
+    }
+
+    .titulo-principal {
+        font-size: 1.6rem;
+    }
+
+    .logo-icon {
+        width: 45px;
+        height: 45px;
+    }
+}

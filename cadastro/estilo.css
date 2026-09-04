@@ -1,0 +1,366 @@
+@charset "UTF-8";
+
+       * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Inter", "Inter Fallback", sans-serif;
+            background: #faf3ed;
+            color: #3e2c1b;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        a {
+            
+            color: inherit;
+        }
+
+        header {
+            padding: 15px 30px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;    
+            margin-bottom: 5px;
+
+        }
+
+        .logo {
+            display: flex;
+           align-items: center;
+            gap: 12px;
+        }
+
+        .logo img {
+            width: 60px;
+            height: 60px;
+            padding: 5px;
+        }
+
+        .logo span {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #2d1a0a;
+            letter-spacing: 1px;
+        }
+
+        nav {
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        nav a {
+            font-weight: 600;
+            color: #2d1a0a;
+            padding: 8px 14px;
+            border-radius: 30px;
+            transition: 0.3s;
+            font-size: 1.05rem;
+        }
+
+        nav a:hover {
+            background: rgba(255,255,255,0.4);
+            transform: scale(1.05);
+        }
+
+        nav a.destaque {
+            background: #2d1a0a;
+            color: #ffb07c;
+            padding: 8px 22px;
+        }
+
+        nav a.destaque:hover {
+            background: #4d2e18;
+            color: #fff;
+        }
+        hr {
+            border: none;
+            height: 2px;
+            background: linear-gradient(to right, transparent, #d68c5c, transparent);
+            margin: 10px 0 20px 0;
+        }
+.cadastro-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    padding: 30px 20px;
+}
+
+.cadastro-container {
+    max-width: 550px;
+    width: 100%;
+    background: #fff;
+    padding: 35px 30px 40px;
+    border-radius: 20px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.06);
+    border: 1px solid #f0d6c0;
+    text-align: center;
+}
+
+.cadastro-container h2 {
+    font-size: 2.2rem;
+    color: #4d2e18;
+    margin-bottom: 8px;
+}
+
+.cadastro-container > p {
+    color: #666;
+    font-size: 1.05rem;
+    margin-bottom: 30px;
+}
+
+
+.form-cadastro {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    text-align: left;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.campo label {
+    font-weight: 600;
+    color: #4d2e18;
+    font-size: 0.95rem;
+}
+
+.campo input,
+.campo textarea {
+    padding: 12px 16px;
+    border: 2px solid #e8d5c4;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-family: inherit;
+    background: #faf3ed;
+    transition: 0.3s;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.campo input:focus,
+.campo textarea:focus {
+    border-color: #ff9a56;
+    background: #fff;
+    box-shadow: 0 0 0 4px rgba(255, 154, 86, 0.15);
+}
+
+.campo textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+
+.btn-cadastrar {
+    background: #ff9a56;
+    color: #2d1a0a;
+    padding: 14px;
+    border: none;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 4px 15px rgba(255, 154, 86, 0.3);
+    margin-top: 8px;
+}
+
+.btn-cadastrar:hover {
+    background: #ffb07c;
+    transform: scale(1.02);
+    box-shadow: 0 8px 25px rgba(255, 154, 86, 0.5);
+}
+
+
+.cadastro-obs {
+    margin-top: 25px;
+    font-size: 0.9rem;
+    color: #888;
+}
+
+
+@media (max-width: 600px) {
+    .cadastro-container {
+        padding: 25px 18px;
+    }
+
+    .cadastro-container h2 {
+        font-size: 1.8rem;
+    }
+
+    .campo input,
+    .campo textarea {
+        font-size: 0.95rem;
+        padding: 10px 14px;
+    }
+
+    .btn-cadastrar {
+        font-size: 1rem;
+        padding: 12px;
+    }
+}
+.login-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    padding: 30px 20px;
+}
+
+.login-container {
+    max-width: 420px;
+    width: 100%;
+    background: #fff;
+    padding: 35px 30px 40px;
+    border-radius: 20px;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.06);
+    border: 1px solid #f0d6c0;
+    text-align: center;
+}
+
+.login-icon {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.login-container h2 {
+    font-size: 2.2rem;
+    color: #4d2e18;
+    margin-bottom: 8px;
+}
+
+.login-container > p {
+    color: #666;
+    font-size: 1.05rem;
+    margin-bottom: 30px;
+}
+
+.form-login {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    text-align: left;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.campo label {
+    font-weight: 600;
+    color: #4d2e18;
+    font-size: 0.95rem;
+}
+
+.campo input {
+    padding: 12px 16px;
+    border: 2px solid #e8d5c4;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-family: inherit;
+    background: #faf3ed;
+    transition: 0.3s;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.campo input:focus {
+    border-color: #ff9a56;
+    background: #fff;
+    box-shadow: 0 0 0 4px rgba(255, 154, 86, 0.15);
+}
+
+.campo-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 4px 0;
+}
+
+.campo-checkbox input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #ff9a56;
+    cursor: pointer;
+}
+
+.campo-checkbox label {
+    font-size: 0.95rem;
+    color: #4d2e18;
+    cursor: pointer;
+}
+
+
+.btn-login {
+    background: #ff9a56;
+    color: #2d1a0a;
+    padding: 14px;
+    border: none;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 4px 15px rgba(255, 154, 86, 0.3);
+    margin-top: 8px;
+}
+
+.btn-login:hover {
+    background: #ffb07c;
+    transform: scale(1.02);
+    box-shadow: 0 8px 25px rgba(255, 154, 86, 0.5);
+}
+
+.login-links {
+    margin-top: 25px;
+    font-size: 0.95rem;
+    color: #888;
+}
+
+.login-links a {
+    color: #4d2e18;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.login-links a:hover {
+    color: #ff9a56;
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    .login-container {
+        padding: 25px 18px;
+    }
+
+    .login-container h2 {
+        font-size: 1.8rem;
+    }
+
+    .campo input {
+        font-size: 0.95rem;
+        padding: 10px 14px;
+    }
+
+    .btn-login {
+        font-size: 1rem;
+        padding: 12px;
+    }
+}

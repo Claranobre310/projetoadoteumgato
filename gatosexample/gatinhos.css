@@ -1,11 +1,84 @@
 @charset "UTF-8";
 
+        * {
+            box-sizing: border-box;
+        }
+
 body {
     font-size: 20px;
     background-image:linear-gradient(to right, floralwhite, #809bce);
     font-family: Arial, Helvetica, sans-serif;
-    margin: 0%;
 }
+
+        a {
+            text-decoration: none;
+        }
+
+        header {
+            padding: 15px 30px;
+            border-radius: 10px;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;    
+            margin-bottom: 5px;
+            display: flex;
+          height: 90px;
+
+        }
+
+        .logo {
+            display: flex;
+           align-items: center;
+            gap: 12px;
+        }
+
+        .logo img {
+            width: 60px;
+            height: 60px;
+            padding: 5px;
+        }
+
+        .logo span {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #2d1a0a;
+            letter-spacing: 1px;
+        }
+
+        nav {
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        nav a {
+            font-weight: 600;
+            color: #2d1a0a;
+            padding: 8px 14px;
+            border-radius: 30px;
+            transition: 0.3s;
+            font-size: 1.05rem;
+        }
+
+        nav a:hover {
+            background: rgba(255,255,255,0.4);
+            transform: scale(1.05);
+        }
+
+        nav a.destaque {
+            background: #2d1a0a;
+            color: #ffb07c;
+            padding: 8px 22px;
+        }
+
+        hr {
+            border: none;
+            height: 2px;
+            background: linear-gradient(to right, transparent, #d68c5c, transparent);
+            margin: 10px 0 20px 0;
+        }
+
 
 
 .gato{
@@ -28,10 +101,7 @@ ul{
     text-align: center;
 }
 
-header{
-    display: flex;
-    height: 90px;
-}
+
 
 
 .adotee{
@@ -50,3 +120,4 @@ a{
     justify-content: end;
     top: 4%;
 }
+
